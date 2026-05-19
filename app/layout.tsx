@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n";
 import { WebVitals } from "@/components/web-vitals";
 import { CursorCleanup } from "@/components/cursor-cleanup";
+import { ChatbotWidget } from "@/components/chatbot-widget";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const inter = Inter({
@@ -90,6 +91,7 @@ export default function RootLayout({
             <WebVitals />
             <CursorCleanup />
             {children}
+            <ChatbotWidget />
           </I18nProvider>
         </ThemeProvider>
       </body>
