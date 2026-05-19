@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill //F //PID 5264)",
+      "Bash(curl \"https://generativelanguage.googleapis.com/v1beta/models?key=AIzaSyAJ0PcuyDPktTXNG8OoAwW6vXfN6PUgjTA\")",
+      "Bash(curl -X POST http://localhost:3000/api/chat -H \"Content-Type: application/json\" -d '{\"message\":\"What is your experience with AWS?\"}')",
+      "Bash(curl -X POST \"https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:embedContent?key=AIzaSyAJ0PcuyDPktTXNG8OoAwW6vXfN6PUgjTA\" -H \"Content-Type: application/json\" -d '{\"content\":{\"parts\":[{\"text\":\"test\"}]}}')",
+      "Bash(curl -s -X POST \"https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:embedContent?key=AIzaSyAJ0PcuyDPktTXNG8OoAwW6vXfN6PUgjTA\" -H \"Content-Type: application/json\" -d '{\"content\":{\"parts\":[{\"text\":\"test\"}]}}')",
+      "Bash(python -c \"import sys, json; data = json.load\\(sys.stdin\\); print\\(len\\(data['embedding']['values']\\)\\)\")",
+      "Bash(curl -s -X POST \"https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key=AIzaSyAJ0PcuyDPktTXNG8OoAwW6vXfN6PUgjTA\" -H \"Content-Type: application/json\" -d '{\"content\":{\"parts\":[{\"text\":\"test\"}]}}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/embed)",
+      "Bash(python -c \"import sys, json; data = json.load\\(sys.stdin\\); print\\(f\\\\\"Success: {data.get\\('success'\\)}\\\\\"\\); print\\(f\\\\\"Indexed: {data.get\\('message'\\)}\\\\\"\\)\")"
+    ]
+  }
+}
