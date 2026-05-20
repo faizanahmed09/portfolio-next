@@ -141,11 +141,12 @@ If someone asks about contacting ${personalInfo.name}, provide: ${personalInfo.e
     })
 
     const response = result.text || ''
+    const finishReason = result.candidates?.[0]?.finishReason
 
     return NextResponse.json({
       response,
       sources: formatSources(similarDocs),
-      finishReason: result.finishReason,
+      finishReason,
     })
   } catch (error) {
     console.error('Chat API error:', error)
